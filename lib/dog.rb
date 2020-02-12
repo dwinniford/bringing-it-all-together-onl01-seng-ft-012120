@@ -74,6 +74,9 @@ class Dog
     d = self.new(hash)
     d.save
   end 
+  
+  def self.find_or_create_by(hash)
+    sql
     
   
   
