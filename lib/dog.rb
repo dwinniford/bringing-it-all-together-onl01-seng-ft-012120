@@ -81,9 +81,9 @@ class Dog
       FROM dogs 
       WHERE name = ? AND breed = ?
     SQL
-    row = DB[:conn].execute(sql, name, breed)
-    if !row.empty?
-      self.new_from_db(row[0])
+    result = DB[:conn].execute(sql, name, breed)
+    if !result.empty?
+      self.new_from_db(result[0])
     else 
       d = self.new(name: name, breed: breed)
       d.save
