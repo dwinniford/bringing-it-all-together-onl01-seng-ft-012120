@@ -85,7 +85,7 @@ class Dog
     if !row.empty?
       self.new_from_db(row[0])
     else 
-      d = self.new(name, breed)
+      d = self.new(name: name, breed: breed)
       d.save
       d
     end 
